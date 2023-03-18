@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 
 // Create an array with the images for the front of the cards
 const cardImages = [
@@ -19,6 +20,9 @@ const cardImages = [
 ]
 
 function App() {
+  // Hold card state
+  // Once cards are shuffled the state of the cards will be updated with useState
+  const [cards, setCards] = useState([])
 // Function duplicates each card to make a pair within the game
 // Randomize the card order
 // Apply id to the cards to be used within my grid
@@ -29,6 +33,8 @@ const shuffleCards = () => {
   .sort(() => Math.random() - 0.5)
   // Random id is created on each object - card
   .map((card) => ({ ...card, id: Math.random()}))
+  // When function is called the cards will be shuffled and then updated within the setCards state
+  setCards(shuffledCards)
 }
   return (
     <div className="App">
