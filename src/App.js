@@ -36,6 +36,9 @@ const shuffleCards = () => {
   // When function is called the cards will be shuffled and then updated within the setCards state
   setCards(shuffledCards)
 }
+// Test
+// Test is working!
+console.log(cards);
   return (
     <div className="App">
       <h1>ACNH Memory Match</h1>
