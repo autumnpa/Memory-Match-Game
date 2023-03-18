@@ -49,7 +49,12 @@ function App() {
   // Function that takes in a card that the user selects
   // Pass this in to the card component
 const handleSelection = (card) => {
-console.log(card)
+  // Console log is working!! Don't need for the time being
+  // console.log(card)
+  // Add some logic now to check if the user has made selections to update state
+  // If selectionOne comes back false theres no selection for card one and setSelectionOne(card) runs and updates selection one state
+  // If selectionOne comes back true then setSelectionTwo runs an dupdates because selection one already has a value
+  selectionOne ? setSelectionTwo(card) : setSelectionOne(card)
 }
 
   return (
