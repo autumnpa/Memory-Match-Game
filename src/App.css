@@ -1,7 +1,19 @@
+.body {
+  background-color: #144328;
+}
+
+.header {
+  background-color: #144328;
+  padding: 15px;
+}
+
 .App {
   text-align: center;
   max-width: 860px;
   margin: 40px auto;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: white;
 }
 
 .card-grid {
@@ -9,4 +21,23 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.play-button {
+  background-color: #dfe9e3;
+  border-radius: 8px;
+  border-style: none;
+  color: #144328;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 20px;
+}
+
+.play-button:hover {
+  background-color: #a6e6c0;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
 }

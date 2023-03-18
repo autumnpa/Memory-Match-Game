@@ -118,28 +118,32 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <h1>ACNH Memory Match</h1>
-      {/* When the button is clicked the function runs that shuffles the cards for the game */}
-      <button onClick={shuffleCards}>Play</button>
-      <div className="card-grid">
-        {/* Create card grid */}
-        {/* I need the cards first - go populate the array!! - DONE*/}
-        {/* Map through cards state */}
-        {cards.map(card => (
-          // Parent needs key prop - use id from shuffled cards
-          // Send card prop into component so new component has access
-          <Card
-            key={card.id}
-            card={card}
-            handleSelection={handleSelection}
-            // Flipped will be true if card = selection 1 or card = selection 2 or the cards matched property value = true
-            flipped={card === selectionOne || card === selectionTwo || card.matched}
-            // Cards can be flipped infinately while waiting for the program to determine a match or not - this is CRAZY.
-            // Add a time period where other cards are disabled until the computer determines if a match was made or not when the card selections are being compared
-            disabled={disabled}
-          />
-        ))}
+    <div className="body">
+      <div className="App">
+        <div className="header">
+          <h1>ACNH Memory Match</h1>
+          {/* When the button is clicked the function runs that shuffles the cards for the game */}
+          <button className="play-button" onClick={shuffleCards}>Start Game</button>
+        </div>
+        <div className="card-grid">
+          {/* Create card grid */}
+          {/* I need the cards first - go populate the array!! - DONE*/}
+          {/* Map through cards state */}
+          {cards.map(card => (
+            // Parent needs key prop - use id from shuffled cards
+            // Send card prop into component so new component has access
+            <Card
+              key={card.id}
+              card={card}
+              handleSelection={handleSelection}
+              // Flipped will be true if card = selection 1 or card = selection 2 or the cards matched property value = true
+              flipped={card === selectionOne || card === selectionTwo || card.matched}
+              // Cards can be flipped infinately while waiting for the program to determine a match or not - this is CRAZY.
+              // Add a time period where other cards are disabled until the computer determines if a match was made or not when the card selections are being compared
+              disabled={disabled}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
