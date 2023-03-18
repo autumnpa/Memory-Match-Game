@@ -45,6 +45,9 @@ function App() {
       // Random id is created on each object - card
       .map((card) => ({ ...card, id: Math.random() }))
     // When function is called the cards will be shuffled and then updated within the setCards state
+    // Refresh selections if a new game is started
+    setSelectionOne(null)
+    setSelectionTwo(null)
     setCards(shuffledCards)
   }
   // Test
