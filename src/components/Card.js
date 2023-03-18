@@ -1,6 +1,6 @@
 import './Card.css';
 
-export default function Card({ card, handleSelection }) {
+export default function Card({ card, handleSelection, flipped }) {
 
     const handleClick = () => {
         // Function to update the state
@@ -8,7 +8,9 @@ export default function Card({ card, handleSelection }) {
     }
     return (
         <div className="card">
-            <div>
+            {/* If the flip property is true apply the class to the card */}
+            {/* If flipped is true flipped class will be applied to the card if false nothing is applied with the empty class "" */}
+            <div className={flipped ? "flipped" : ""}>
                 {/* Front and back of card here to display in grid */}
                 {/* Use property name on each card from cards image array */}
                 <img className="card-front" src={card.src} alt="card front" />
