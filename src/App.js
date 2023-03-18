@@ -4,7 +4,18 @@ import './App.css';
 const cardImages = [
   // Object with image source property
   // Add more after testing that image displays
-  { "src": "/images/apple.png" },
+  { "src": "/images/bell-bag.png" },
+  { "src": "/images/blathers.png" },
+  { "src": "/images/wisp.png" },
+  { "src": "/images/tom.png" },
+  { "src": "/images/pear.png" },
+  { "src": "/images/peach.png" },
+  { "src": "/images/star-yellow.png" },
+  { "src": "/images/recipe-card.png" },
+  { "src": "/images/present.png" },
+  { "src": "/images/leaf.png" },
+  { "src": "/images/fossil.png" },
+  { "src": "/images/cherry.png" },
 ]
 
 function App() {
