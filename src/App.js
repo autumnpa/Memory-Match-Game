@@ -22,6 +22,10 @@ function App() {
 // Function duplicates each card to make a pair within the game
 // Randomize the card order
 // Apply id to the cards to be used within my grid
+const shuffleCards = () => {
+  // Adds my array of images TWICE to create pairs in a new array
+  const shuffledCards = [...cardImages, ...cardImages]
+}
   return (
     <div className="App">
       <h1>ACNH Memory Match</h1>
