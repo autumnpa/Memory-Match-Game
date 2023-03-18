@@ -66,6 +66,7 @@ function App() {
   // I want the function to fire and do something when both selections have a value
   useEffect(() => {
     // Add card disable beofre the check so they are disabled then selections are checked
+    // Disabled is set to tru and use effect fires immediately - now all of my cards are disabled. This needs to be moved into my if statement to be checked
     setDisabled(true)
     // Once the check is done and a match has been determined or not set disable back to false
     // Comparison in here
