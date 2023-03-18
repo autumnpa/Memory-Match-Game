@@ -6,18 +6,19 @@ import Card from './components/Card';
 const cardImages = [
   // Object with image source property
   // Add more after testing that image displays
-  { "src": "/images/bell-bag.png" },
-  { "src": "/images/blathers.png" },
-  { "src": "/images/wisp.png" },
-  { "src": "/images/tom.png" },
-  { "src": "/images/pear.png" },
-  { "src": "/images/peach.png" },
-  { "src": "/images/star-yellow.png" },
-  { "src": "/images/recipe-card.png" },
-  { "src": "/images/present.png" },
-  { "src": "/images/leaf.png" },
-  { "src": "/images/fossil.png" },
-  { "src": "/images/cherry.png" },
+  // Start of false, if matched turns to true so the card is no longer playable in the current round
+  { "src": "/images/bell-bag.png", matched: false },
+  { "src": "/images/blathers.png", matched: false },
+  { "src": "/images/wisp.png", matched: false },
+  { "src": "/images/tom.png", matched: false },
+  { "src": "/images/pear.png", matched: false },
+  { "src": "/images/peach.png", matched: false },
+  { "src": "/images/star-yellow.png", matched: false },
+  { "src": "/images/recipe-card.png", matched: false },
+  { "src": "/images/present.png", matched: false },
+  { "src": "/images/leaf.png", matched: false },
+  { "src": "/images/fossil.png", matched: false },
+  { "src": "/images/cherry.png", matched: false },
 ]
 
 function App() {
@@ -69,19 +70,32 @@ function App() {
       // Check card sources because thats what we have in our array objects
       if (selectionOne.src === selectionTwo.src) {
         // Console log works!! So logic is working properly!
-        console.log('Its a match!');
+        // console.log('Its a match!');
+        // Take in previous card state to update the card state
+        setCards(prevCards => {
+          // Return a new array taking pervious cards using map method and fire a function for each card
+          return prevCards.map(card => {
+            // If the card source matches the users selection a new object returns and changes the matched property to be true
+            // True for 2 cards inthe array because they share the same source property
+            if (card.src === selectionOne.src) {
+              return { ...card, matched: true }
+            } else {
+              return card
+            }
+          })
+        })
         resetSelections()
       } else {
-        console.log("Not a match!")
+        // console.log("Not a match!")
         resetSelections()
       }
     }
   }, [selectionOne, selectionTwo])
 
-const resetSelections = () => {
-  setSelectionOne(null)
-  setSelectionTwo(null)
-}
+  const resetSelections = () => {
+    setSelectionOne(null)
+    setSelectionTwo(null)
+  }
 
   return (
     <div className="App">
