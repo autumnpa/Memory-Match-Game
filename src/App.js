@@ -45,7 +45,13 @@ function App() {
   }
   // Test
   // Test is working!
-  console.log(cards);
+  // console.log(cards);
+  // Function that takes in a card that the user selects
+  // Pass this in to the card component
+const handleSelection = (card) => {
+console.log(card)
+}
+
   return (
     <div className="App">
       <h1>ACNH Memory Match</h1>
@@ -58,7 +64,11 @@ function App() {
         {cards.map(card => (
           // Parent needs key prop - use id from shuffled cards
           // Send card prop into component so new component has access
-          <Card key={card.id} card={card}/>
+          <Card 
+          key={card.id} 
+          card={card}
+          handleSelection={handleSelection}
+          />
         ))}
       </div>
     </div>
