@@ -107,6 +107,9 @@ function App() {
     setDisabled(false)
   }
 
+  // Start game automatically when opened in browser
+  // Currently starts only when the play button it clicked
+
   return (
     <div className="App">
       <h1>ACNH Memory Match</h1>
