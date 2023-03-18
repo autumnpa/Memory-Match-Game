@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Card from './components/Card';
 
 // Create an array with the images for the front of the cards
@@ -50,14 +50,28 @@ function App() {
   // console.log(cards);
   // Function that takes in a card that the user selects
   // Pass this in to the card component
-const handleSelection = (card) => {
-  // Console log is working!! Don't need for the time being
-  // console.log(card)
-  // Add some logic now to check if the user has made selections to update state
-  // If selectionOne comes back false theres no selection for card one and setSelectionOne(card) runs and updates selection one state
-  // If selectionOne comes back true then setSelectionTwo runs an dupdates because selection one already has a value
-  selectionOne ? setSelectionTwo(card) : setSelectionOne(card)
-}
+  const handleSelection = (card) => {
+    // Console log is working!! Don't need for the time being
+    // console.log(card)
+    // Add some logic now to check if the user has made selections to update state
+    // If selectionOne comes back false theres no selection for card one and setSelectionOne(card) runs and updates selection one state
+    // If selectionOne comes back true then setSelectionTwo runs an dupdates because selection one already has a value
+    selectionOne ? setSelectionTwo(card) : setSelectionOne(card)
+  }
+
+  // Compare card selections to check for a match
+  // Function and pass in dependency array!
+  // I want the function to fire and do something when both selections have a value
+  useEffect(() => {
+    // Comparison in here
+    // Use an if statement!!!!
+    if (selectionOne && selectionTwo) {
+      // Check card sources because thats what we have in our array objects
+      if (selectionOne.src === selectionTwo.src) {
+        console.log('Its a match!');
+      }
+    }
+  }, [selectionOne, selectionTwo])
 
   return (
     <div className="App">
@@ -71,10 +85,10 @@ const handleSelection = (card) => {
         {cards.map(card => (
           // Parent needs key prop - use id from shuffled cards
           // Send card prop into component so new component has access
-          <Card 
-          key={card.id} 
-          card={card}
-          handleSelection={handleSelection}
+          <Card
+            key={card.id}
+            card={card}
+            handleSelection={handleSelection}
           />
         ))}
       </div>
