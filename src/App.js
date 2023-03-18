@@ -67,11 +67,12 @@ function App() {
   useEffect(() => {
     // Add card disable beofre the check so they are disabled then selections are checked
     // Disabled is set to tru and use effect fires immediately - now all of my cards are disabled. This needs to be moved into my if statement to be checked
-    setDisabled(true)
     // Once the check is done and a match has been determined or not set disable back to false
     // Comparison in here
     // Use an if statement!!!!
     if (selectionOne && selectionTwo) {
+      // Only set to true when two selections have been made
+      setDisabled(true)
       // Check card sources because thats what we have in our array objects
       if (selectionOne.src === selectionTwo.src) {
         // Console log works!! So logic is working properly!
