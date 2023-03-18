@@ -32,6 +32,7 @@ function App() {
   // If they are a match I need a function that resents the handleChoice
   const [selectionOne, setSelectionOne] = useState(null)
   const [selectionTwo, setSelectionTwo] = useState(null)
+  const [disabled, setDisabled] = useState(false)
 
   // Function duplicates each card to make a pair within the game
   // Randomize the card order
@@ -64,6 +65,9 @@ function App() {
   // Function and pass in dependency array!
   // I want the function to fire and do something when both selections have a value
   useEffect(() => {
+    // Add card disable beofre the check so they are disabled then selections are checked
+    setDisabled(true)
+    // Once the check is done and a match has been determined or not set disable back to false
     // Comparison in here
     // Use an if statement!!!!
     if (selectionOne && selectionTwo) {
@@ -78,7 +82,7 @@ function App() {
             // If the card source matches the users selection a new object returns and changes the matched property to be true
             // True for 2 cards inthe array because they share the same source property
             if (card.src === selectionOne.src) {
-              return {...card, matched: true}
+              return { ...card, matched: true }
             } else {
               return card
             }
@@ -98,6 +102,7 @@ function App() {
   const resetSelections = () => {
     setSelectionOne(null)
     setSelectionTwo(null)
+    setDisabled(false)
   }
 
   return (
@@ -120,6 +125,7 @@ function App() {
             flipped={card === selectionOne || card === selectionTwo || card.matched}
             // Cards can be flipped infinately while waiting for the program to determine a match or not - this is CRAZY.
             // Add a time period where other cards are disabled until the computer determines if a match was made or not when the card selections are being compared
+            disabled={disabled}
           />
         ))}
       </div>
