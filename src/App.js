@@ -118,6 +118,8 @@ function App() {
             handleSelection={handleSelection}
             // Flipped will be true if card = selection 1 or card = selection 2 or the cards matched property value = true
             flipped={card === selectionOne || card === selectionTwo || card.matched}
+            // Cards can be flipped infinately while waiting for the program to determine a match or not - this is CRAZY.
+            // Add a time period where other cards are disabled until the computer determines if a match was made or not when the card selections are being compared
           />
         ))}
       </div>
