@@ -39,7 +39,8 @@ const shuffleCards = () => {
   return (
     <div className="App">
       <h1>ACNH Memory Match</h1>
-      <button>Play</button>
+      {/* When the button is clicked the function runs that shuffles the cards for the game */}
+      <button onClick={shuffleCards}>Play</button>
       <div className="card-grid">
         {/* Create card grid */}
         {/* I need the cards first - go populate the array!! */}
