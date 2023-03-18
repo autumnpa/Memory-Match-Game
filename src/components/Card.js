@@ -1,6 +1,8 @@
+import './Card.css';
+
 export default function Card({ card }) {
     return (
-        <div>
+        <div className="card">
             <div>
                 {/* Front and back of card here to display in grid */}
                 {/* Use property name on each card from cards image array */}

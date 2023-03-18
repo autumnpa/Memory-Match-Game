@@ -52,7 +52,7 @@ function App() {
         {cards.map(card => (
           // Parent needs key prop - use id from shuffled cards
           // Send card prop into component so new component has access
-          <Card  key={card.id} card={card}/>
+          <Card key={card.id} card={card}/>
         ))}
       </div>
     </div>
