@@ -25,6 +25,10 @@ function App() {
 const shuffleCards = () => {
   // Adds my array of images TWICE to create pairs in a new array
   const shuffledCards = [...cardImages, ...cardImages]
+  // Sorts the cards to have a pair and using math random makes them have different orders in the array so finding a pair is more challenging
+  .sort(() => Math.random() - 0.5)
+  // Random id is created on each object - card
+  .map((card) => ({ ...card, id: Math.random()}))
 }
   return (
     <div className="App">
