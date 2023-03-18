@@ -78,7 +78,7 @@ function App() {
             // If the card source matches the users selection a new object returns and changes the matched property to be true
             // True for 2 cards inthe array because they share the same source property
             if (card.src === selectionOne.src) {
-              return { ...card, matched: true }
+              return {...card, matched: true}
             } else {
               return card
             }

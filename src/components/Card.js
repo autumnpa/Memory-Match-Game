@@ -1,4 +1,4 @@
-import './Card.css';
+import './Card.css'
 
 export default function Card({ card, handleSelection, flipped }) {
 
