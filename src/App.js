@@ -15,6 +15,7 @@ function App() {
       <button>Play</button>
       <div className="card-grid">
         {/* Create card grid */}
+        {/* I need the cards first - go populate the array!! */}
         { }
       </div>
     </div>
