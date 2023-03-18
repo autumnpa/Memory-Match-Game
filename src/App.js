@@ -91,6 +91,7 @@ function App() {
       }
     }
   }, [selectionOne, selectionTwo])
+  console.log(cards)
 
   const resetSelections = () => {
     setSelectionOne(null)
