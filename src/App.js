@@ -68,10 +68,20 @@ function App() {
     if (selectionOne && selectionTwo) {
       // Check card sources because thats what we have in our array objects
       if (selectionOne.src === selectionTwo.src) {
+        // Console log works!! So logic is working properly!
         console.log('Its a match!');
+        resetSelections()
+      } else {
+        console.log("Not a match!")
+        resetSelections()
       }
     }
   }, [selectionOne, selectionTwo])
+
+const resetSelections = () => {
+  setSelectionOne(null)
+  setSelectionTwo(null)
+}
 
   return (
     <div className="App">
