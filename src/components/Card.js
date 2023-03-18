@@ -16,7 +16,7 @@ export default function Card({ card, handleSelection, flipped }) {
                 <img className="front" src={card.src} alt="card front" />
                 {/* Click event for choices goes on the back of the card because the user won't see the front until it's been selected and can flip */}
                 <img className="back" 
-                src="/images/card-bg.png" 
+                src="images/card-bg.png" 
                 onClick={handleClick} 
                 alt="card back" />
             </div>
