@@ -1,6 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 
+// Create an array with the images for the front of the cards
+const cardImages = [
+  // Object with image source property
+  // Add more after testing that image displays
+  {"src": "/images/apple.png"},
+]
+
 function App() {
   return (
     <div className="App">
