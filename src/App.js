@@ -109,6 +109,10 @@ function App() {
 
   // Start game automatically when opened in browser
   // Currently starts only when the play button it clicked
+  useEffect(() => {
+    shuffleCards()
+    // This function starts the game so using this here will start the game once the user navigates to the page
+  }, [])
 
   return (
     <div className="App">
