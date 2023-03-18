@@ -30,8 +30,8 @@ function App() {
   // Need to add a click event to the card component
   // If both of these hold a value then we need to compare them to see if its a match
   // If they are a match I need a function that resents the handleChoice
-  const [selectionOne, setSelectionOne] = useState()
-  const [selectionTwo, setSelectionTwo] = useState()
+  const [selectionOne, setSelectionOne] = useState(null)
+  const [selectionTwo, setSelectionTwo] = useState(null)
 
   // Function duplicates each card to make a pair within the game
   // Randomize the card order

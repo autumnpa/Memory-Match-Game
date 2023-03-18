@@ -10,12 +10,12 @@
 
 /* Front of card - picture side  */
 /* Hide the card front by rotating it */
-.card .card-front {
+.card .front {
     transform: rotateY('90deg');
     position: absolute;
 }
 
 /* When flipped rotate the card back with styling adn hides the back of the card default styling */
-.flipped .card-front {
+.flipped .front {
     transform: rotateY('0deg')
 }
