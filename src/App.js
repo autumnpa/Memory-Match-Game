@@ -87,7 +87,9 @@ function App() {
         resetSelections()
       } else {
         // console.log("Not a match!")
-        resetSelections()
+        // Card flips back over way too quickly - update 
+        // Wait 1 second then fire this function that resents the selections if there is not match
+        setTimeout(() => resetSelections(), 1000)
       }
     }
   }, [selectionOne, selectionTwo])
