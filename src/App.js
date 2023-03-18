@@ -46,8 +46,16 @@ console.log(cards);
       <button onClick={shuffleCards}>Play</button>
       <div className="card-grid">
         {/* Create card grid */}
-        {/* I need the cards first - go populate the array!! */}
-        { }
+        {/* I need the cards first - go populate the array!! - DONE*/}
+        {/* Map through cards state */}
+        {cards.map(card => (
+          // Parent needs key prop - use id from shuffled cards
+          <div key={card.id}>
+            <div>
+              
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
