@@ -114,6 +114,8 @@ function App() {
             key={card.id}
             card={card}
             handleSelection={handleSelection}
+            // Flipped will be true if card = selection 1 or card = selection 2 or the cards matched property value = true
+            flipped={card === selectionOne || card === selectionTwo || card.matched}
           />
         ))}
       </div>
