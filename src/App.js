@@ -27,6 +27,8 @@ function App() {
   // Create a state for the users card selections
   // When they click the first card they choose it will update to the state same with the second choice
   // Need to add a click event to the card component
+  // If both of these hold a value then we need to compare them to see if its a match
+  // If they are a match I need a function that resents the handleChoice
   const [selectionOne, setSelectionOne] = useState()
   const [selectionTwo, setSelectionTwo] = useState()
 
