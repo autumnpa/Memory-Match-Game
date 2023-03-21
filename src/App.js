@@ -7,18 +7,18 @@ const cardImages = [
   // Object with image source property
   // Add more after testing that image displays
   // Start of false, if matched turns to true so the card is no longer playable in the current round
-  { "src": "/images/bell-bag.png", matched: false },
-  { "src": "/images/blathers.png", matched: false },
-  { "src": "/images/wisp.png", matched: false },
-  { "src": "/images/tom.png", matched: false },
-  { "src": "/images/pear.png", matched: false },
-  { "src": "/images/peach.png", matched: false },
-  { "src": "/images/star-yellow.png", matched: false },
-  { "src": "/images/recipe-card.png", matched: false },
-  { "src": "/images/present.png", matched: false },
-  { "src": "/images/leaf.png", matched: false },
-  { "src": "/images/fossil.png", matched: false },
-  { "src": "/images/cherry.png", matched: false },
+  { "src": "./bell-bag.png", matched: false },
+  { "src": "./blathers.png", matched: false },
+  { "src": "./wisp.png", matched: false },
+  { "src": "./tom.png", matched: false },
+  { "src": "./pear.png", matched: false },
+  { "src": "./peach.png", matched: false },
+  { "src": "./star-yellow.png", matched: false },
+  { "src": "./recipe-card.png", matched: false },
+  { "src": "./present.png", matched: false },
+  { "src": "./leaf.png", matched: false },
+  { "src": "./fossil.png", matched: false },
+  { "src": "./cherry.png", matched: false },
 ]
 
 function App() {
