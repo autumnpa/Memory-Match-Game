@@ -1,3 +1,9 @@
+## TODO - FUTURE FEATURES TO ADD
+
+- Recognition when a user completes and wins the game
+- Timer (needs to reset when a new game is started)
+- Count turns per round (needs to reset when a new game is started)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
