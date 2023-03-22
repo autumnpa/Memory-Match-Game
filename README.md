@@ -4,6 +4,7 @@
 - Timer (needs to reset when a new game is started)
 - Count turns per round (needs to reset when a new game is started)
 - More difficulty (a timer will add more difficulty to levels - needs to still be achievable within the time restrictions)
+- Update styling (changes to body, header, title, more buttons???)
 
 # Getting Started with Create React App
 
