@@ -123,6 +123,9 @@ function App() {
         <div className="header">
           <h1>ACNH Memory Match</h1>
           {/* When the button is clicked the function runs that shuffles the cards for the game */}
+          {/* Update this button to start the game - possibly a second button to reshuffle the cards during a round but does NOT restart the whole game */}
+          {/* A new function will need to be created in order to shuffle the cards during a round without restarting a game */}
+          {/* This will add more difficulty to the game - as mentioned during testing */}
           <button className="play-button" onClick={shuffleCards}>Start Game</button>
         </div>
         <div className="card-grid">
