@@ -3,6 +3,7 @@
 - Recognition when a user completes and wins the game
 - Timer (needs to reset when a new game is started)
 - Count turns per round (needs to reset when a new game is started)
+- More difficulty (a timer will add more difficulty to levels - needs to still be achievable within the time restrictions)
 
 # Getting Started with Create React App
 
