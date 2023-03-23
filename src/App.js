@@ -30,6 +30,7 @@ function App() {
   // Need to add a click event to the card component
   // If both of these hold a value then we need to compare them to see if its a match
   // If they are a match I need a function that resents the handleChoice
+  // Add variable to hold number of turns per round - maybe timer - counting UP, down is too stressful
   const [selectionOne, setSelectionOne] = useState(null)
   const [selectionTwo, setSelectionTwo] = useState(null)
   const [disabled, setDisabled] = useState(false)
@@ -41,6 +42,7 @@ function App() {
     // Adds my array of images TWICE to create pairs in a new array
     const shuffledCards = [...cardImages, ...cardImages]
       // Sorts the cards to have a pair and using math random makes them have different orders in the array so finding a pair is more challenging
+      // User test - card pairs are often side by side - can this be fixed by adjusting my value?
       .sort(() => Math.random() - 0.5)
       // Random id is created on each object - card
       .map((card) => ({ ...card, id: Math.random() }))
@@ -121,7 +123,7 @@ function App() {
     <div className="body">
       <div className="App">
         <div className="header">
-          <h1>ACNH Memory Match</h1>
+          <h1>Memory Match</h1>
           {/* When the button is clicked the function runs that shuffles the cards for the game */}
           {/* Update this button to start the game - possibly a second button to reshuffle the cards during a round but does NOT restart the whole game */}
           {/* A new function will need to be created in order to shuffle the cards during a round without restarting a game */}
